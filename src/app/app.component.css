@@ -1,0 +1,88 @@
+.gridWrapper {
+    height:98vh;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 2fr 2fr 1fr 5fr 2fr;
+    grid-template-rows: repeat(24, 100px);
+    grid-template-areas:
+    "og2 og2 og2 og2 og3"
+    "og1 sub sub main og3"
+    "og1 sub sub main og3"
+    "og1 sub sub main og3"
+    "og1 nav box2 main og3"
+    "og1 nav box1 main og3"
+    "og1 og4 og4 og4 og3"
+    "og1 og4 og4 og4 og3"
+    "og1 og4 og4 og4 og3"
+    "og1 og4 og4 og4 og3"
+    "og1 og4 og4 og4 og3"
+    "og1 og4 og4 og4 og3"
+    "og1 og4 og4 og4 og3"
+    "og1 og4 og4 og4 og3"
+    "og1 og4 og4 og4 og3"
+    "og1 og4 og4 og4 og3"
+    "og1 og4 og4 og4 og3"
+    "og1 og4 og4 og4 og3"
+    "og1 og4 og4 og4 og3"
+    "og1 og4 og4 og4 og3"
+    "og1 og4 og4 og4 og3"
+    "og1 og4 og4 og4 og3"
+    "og1 og4 og4 og4 og3"
+    "og5 og5 og5 og5 og5";
+}
+
+.offgrid1 {
+    grid-area: og1;
+    /* background: #444; */
+    border-right: 1px solid black;
+
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+.offgrid2 {
+    grid-area: og2;
+
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    background: #fff;
+}
+.offgrid3 {
+    grid-area: og3;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    background: #fff;
+}
+.offgrid4 {
+    grid-area: og4;
+    background: #aaa;
+}
+.offgrid5 {
+    grid-area: og5;
+    border-top: 1px solid black;
+    background: #fff;
+}
+
+.sub {
+    grid-area: sub;
+    background: #aaf;
+}
+
+.main {
+    grid-area: main;
+    background: #ddf;
+}
+
+.nav {
+    grid-area: nav;
+    background: #66f;
+}
+
+.box1 {
+    grid-area: box1;
+    background: #22f;
+}
+
+.box2 {
+    grid-area: box2;
+    background: #ccf;
+}

@@ -1,0 +1,24 @@
+
+
+
+
+
+
+
+
+<h1>Angular 2 Recursive List</h1>
+<div>
+  <ng-template #recursiveList let-list>
+    <div class="thoughtContainer">
+      <div class="thoughtBox" *ngFor="let item of list" ng-class="{'oddThought': isOdd}">
+        <div class="thoughtText">{{item.text}}</div>
+        <div class="thoughtButtons">T</div>
+        <div class="user">{{item.createdBy}}</div>
+        <div *ngIf="item.comments.length > 0">
+          <ng-container class="commentContainer" *ngTemplateOutlet="recursiveList; context:{ $implicit: item.comments, isOdd: testOdd() }"></ng-container>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+  <ng-container *ngTemplateOutlet="recursiveList; context:{ $implicit: this.list }"></ng-container>
+</div>
